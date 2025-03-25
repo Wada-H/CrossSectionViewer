@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<fx:root prefHeight="225.0" prefWidth="300.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="225.0" prefWidth="300.0">
+         <children>
+            <Button fx:id="createImageButton" layoutX="172.0" layoutY="109.0" mnemonicParsing="false" onAction="#createImage" prefHeight="27.0" prefWidth="100.0" text="Create Image" />
+            <RadioButton fx:id="addModeRadio" layoutX="36.0" layoutY="25.0" mnemonicParsing="false" selected="true" text="Add Mode">
+               <toggleGroup>
+                  <ToggleGroup fx:id="modeSelect" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="editModeRadio" layoutX="172.0" layoutY="25.0" mnemonicParsing="false" text="Edit Mode" toggleGroup="$modeSelect" />
+            <CheckBox fx:id="interlockTimeCheck" layoutX="36.0" layoutY="114.0" mnemonicParsing="false" selected="true" text="Roi Interlock" />
+            <Label layoutX="36.0" layoutY="67.0" text="Projection Method" />
+            <ChoiceBox fx:id="cbProjectionMethod" layoutX="172.0" layoutY="62.0" prefHeight="27.0" prefWidth="100.0" />
+            <Button fx:id="createXZimageButton" layoutX="172.0" layoutY="159.0" mnemonicParsing="false" onAction="#createXZimage" prefHeight="27.0" prefWidth="100.0" text="Convert XZ" />
+         </children>
+      </Pane>
+   </children>
+</fx:root>
